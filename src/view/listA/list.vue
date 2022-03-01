@@ -117,12 +117,18 @@ export default {
 	methods: {
 		async callingList() {
 			this.loading = true;
+			let url = '';
 			try {
-				let url = `https://newsapi.org/v2/everything?apiKey=7aff7bd09d1f41f69fd147911c552134&language=en&q=${
-					this.category
-				}&from=${this.date1.toISOString()}&to=${this.date2.toISOString()}&sortBy=${
-					this.sort
-				}&pageSize=${this.countview}&page=${this.currentpage}`;
+				if (window.location.href.startsWith('http://localhost')) {
+					url = `https://newsapi.org/v2/everything?apiKey=7aff7bd09d1f41f69fd147911c552134&language=en&q=${
+						this.category
+					}&from=${this.date1.toISOString()}&to=${this.date2.toISOString()}&sortBy=${
+						this.sort
+					}&pageSize=${this.countview}&page=${this.currentpage}`;
+				} else {
+					url = 'https://soraji.github.io/dummyAPI/news.json';
+				}
+
 				const res = await axios.get(url);
 				this.listArray = res.data.articles;
 				this.totalCount = res.data.totalResults;

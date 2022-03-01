@@ -57,14 +57,7 @@
 						class="link tooltips_up_exp"
 						id="font_btn"
 						href="#"
-					>
-						<img
-							src="../../assets/font.svg"
-							class="txt_pointer"
-							style="width: 14.5px; height: 14.5px"
-						/>
-						<div><span style="width: 60px">확대/축소</span></div>
-					</button>
+					></button>
 					<div
 						class="popup font_resize_box"
 						tabindex="-1"
