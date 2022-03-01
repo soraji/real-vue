@@ -14,6 +14,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.6",
     "axios": "^0.26.0",
     "core-js": "^3.8.3",
+    "jw-paginate": "^1.0.4",
     "jw-vue-pagination": "^1.0.3",
     "moment": "^2.29.1",
     "vue": "^2.6.14",
